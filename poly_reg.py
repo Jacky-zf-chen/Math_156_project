@@ -17,3 +17,15 @@ x_num = df.select_dtypes(include=np.number)
 
 (F, pval) = f_regression(x_num, y)
 display(F, pval)
+
+
+# code for testing
+from sklearn.datasets import load_diabetes
+diabetes = load_diabetes()
+x = diabetes.data
+Y = diabetes.target
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X = sc.fit_transform(x)
+A = MLR(X, y, 0.03, 30000)
+A
